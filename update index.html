@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jasmin Patiag | Portfolio</title>
   <style>
-  
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
     * {
       margin: 0;
       padding: 0;
@@ -24,15 +24,25 @@
       height: 100vh;
       text-align: center;
       overflow: hidden;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    /* --- MAIN CONTENT --- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .container {
       background-color: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      padding: 40px 60px;
+      backdrop-filter: blur(12px);
+      padding: 50px 70px;
       border-radius: 30px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.02);
     }
 
     h1 {
@@ -53,10 +63,9 @@
       color: #444;
       max-width: 480px;
       line-height: 1.6;
-      margin: 0 auto 25px;
+      margin: 0 auto 20px;
     }
 
-    /* --- BUTTON --- */
     .btn {
       display: inline-block;
       margin-top: 15px;
@@ -71,6 +80,18 @@
 
     .btn:hover {
       background-color: #cc879c;
+      transform: translateY(-2px);
+    }
+
+    .links a {
+      color: #b03a63;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .links a:hover {
+      color: #7b2c4c;
     }
 
     footer {
@@ -85,13 +106,15 @@
   <div class="container">
     <h1>Hi, I'm Jasmin Patiag 💻</h1>
     <h2>Information Technology Student</h2>
-    <p>
-     An Information Technology student learning to create and innovate.
-    </p>
-    <a href="mailto:jasminpatiag@email.com" class="btn">
+    <p>An aspiring IT student learning to create, code, and innovate with purpose.</p>
+
+    <a href="mailto:jasminpatiag@gmail.com" class="btn">
+
+    <div class="links" style="margin-top: 20px;">
+      <p>Email: <a href="mailto:jasminpatiag@gmail.com">jasminpatiag@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/JASMIN-00" target="_blank">github.com/JASMIN-00</a></p>
+    </div>
   </div>
-  <p>Email: <a href="mailto:jasminpatiag.@gmail.com">jasminpatiag.@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/JASMIN-00" target="_blank">github.com/JASMIN-00</a></p>
 
   <footer>© 2025 Jasmin Patiag | Minimalist Portfolio</footer>
 </body>
